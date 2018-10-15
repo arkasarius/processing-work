@@ -3,7 +3,7 @@ public class r
   int x1, x2, y1, y2, z1, z2, w1, w2;
   int costat;
   PShape s;
-  PShape l, r;
+  PShape l, t, r;
   r() {
     costat=100;
     x1=-costat/2;
@@ -30,6 +30,23 @@ public class r
     l.vertex(43, 75);
     l.vertex(-43, 25);
     l.endShape(CLOSE);
-
+    //50 87
+    t = createShape();
+    t.beginShape();
+    t.fill(0, 0, 255);
+    t.vertex(0, -50);
+    t.vertex(87, 0);
+    t.vertex(0, 50);
+    t.vertex(-87, 0);
+    t.endShape(CLOSE);
+    //r
+    r = createShape();
+    r.beginShape();
+    r.fill(255, 0, 255);
+    r.vertex(-43, -25);
+    r.vertex(43, -75);
+    r.vertex(43, 25);
+    r.vertex(-43, 75);
+    r.endShape(CLOSE);
   }
 }
