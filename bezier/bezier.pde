@@ -45,12 +45,12 @@ void setup() {
   a=new walker();
   b=new walker();
   colorMode(HSB, 360, 100, 100, 100);
-  frameRate(10);
+  frameRate(400);
 }
 void draw() {
   stroke(frameCount%360, 100, 100);
-  ellipse(a.px, a.py, 5, 5);
-  ellipse(b.px, b.py, 5, 5);
+  //ellipse(a.px, a.py, 5, 5);
+  //ellipse(b.px, b.py, 5, 5);
   /*
    bezier(0, 0, 0, 1000, a.px, a.px, a.py, a.py);
    bezier(0, 1000, 0, 1000, a.px, a.px, a.py, a.py);
@@ -58,7 +58,7 @@ void draw() {
    bezier(1000, 1000, 0, 1000, a.px, a.px, a.py, a.py);
    */
   bezier(a.px, a.py, b.px, b.py, a.px, a.px, b.py, b.py);
-  fill(0, 5);
+  //fill(0, 5);
   rect(0, 0, 1000, 1000);
   noFill();
   a.run();
